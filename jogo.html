@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script language="javascript"> 
+		var num; 
+		 
+		x = Math.floor(Math.random() * 100 + 1); 
+		contador = 0;
+		do{
+			num = prompt("Digite o número");
+			if (isNaN(num)){ 
+				alert("Por favor, use apenas números para preencher o campo ");
+				continue;
+			}
+			if (num<0 || num>100){
+				alert("Erro! Digite apenas um número de 0 a 100")
+				continue;
+			}
+			
+			if (num>x){
+				alert("O número que você digitou é maior que o resultado!");
+			
+			}else if(num<x){
+				alert("O número que você digitou é menor que o resultado!");
+		
+			}
+		contador++;
+		
+		}while (num != x);
+		alert("Você adivinhou o número em" +contador+ "tentativas");
+	</script> 
+</body>
+</html>
